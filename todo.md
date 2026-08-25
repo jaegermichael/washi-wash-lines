@@ -2,6 +2,9 @@
 
 ## Requested brand and comparison update
 
+- [ ] Create a private GitHub repository and push the current Washi source code.
+- [ ] Verify the GitHub remote points to the newly created repository.
+- [x] Verify mobile typography, navigation, comparison captions, image crops, and sticky WhatsApp action at representative phone widths.
 - [x] Separate the comparison captions so their text never overlaps or mixes colours.
 - [x] Create and apply a refined smooth-edge version of the supplied Washi logo.
 - [x] Replace the illustrated traditional-side comparison panel with a real washing-line photograph.
