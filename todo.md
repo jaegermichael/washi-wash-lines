@@ -2,6 +2,7 @@
 
 ## Requested brand and comparison update
 
+- [x] Separate the comparison captions so their text never overlaps or mixes colours.
 - [x] Create and apply a refined smooth-edge version of the supplied Washi logo.
 - [x] Replace the illustrated traditional-side comparison panel with a real washing-line photograph.
 - [x] Upload and apply the supplied Washi Wash Lines logo in the navigation and footer.

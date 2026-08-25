@@ -99,6 +99,8 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 .traditional-scene__photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.72) contrast(1.05); }
 .traditional-scene::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(0deg, rgba(5,5,5,.62), rgba(5,5,5,.04) 64%); pointer-events: none; }
 .comparison__caption--before { z-index: 2; }
+.comparison__caption--after { right: 32px; left: auto; text-align: right; }
+@media (max-width: 700px) { .comparison__caption--after { right: 17px; } }
 @media (max-width: 700px) { .brand { width: 150px; height: 42px; border-radius: 8px; clip-path: inset(0 round 8px); } }
 
 /* Photographic refresh: real product imagery replaces illustrative mechanism panels while red remains a functional seam. */
