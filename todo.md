@@ -2,6 +2,8 @@
 
 ## Requested brand and comparison update
 
+- [x] Identify why the Vercel domain serves server source code instead of the built website.
+- [ ] Correct the Vercel production configuration and verify the live page renders normally.
 - [x] Create a private GitHub repository and push the current Washi source code.
 - [x] Verify the GitHub remote points to the newly created repository.
 - [x] Verify mobile typography, navigation, comparison captions, image crops, and sticky WhatsApp action at representative phone widths.
