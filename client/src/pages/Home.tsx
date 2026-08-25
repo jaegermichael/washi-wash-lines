@@ -29,6 +29,8 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent
 
 const assets = {
   hero: "/manus-storage/washi-hero-product_24888c39.jpg",
+  logo: "/manus-storage/washi-supplied-logo_f9bea94b.jpeg",
+  comparison: "/manus-storage/washi-comparison-photo_b92eda84.jpg",
   folded: "/manus-storage/washi-home-reference_526e961a.jpg",
   hinge: "/manus-storage/washi-wall-reference_5d55921f.jpg",
   balcony: "/manus-storage/washi-balcony-reference_57e26dc5.jpg",
@@ -97,16 +99,10 @@ function scrollToId(id: string, reducedMotion: boolean | null) {
   });
 }
 
-function WashiLogo({ compact = false }: { compact?: boolean }) {
+function WashiLogo() {
   return (
     <a className="brand" href="#top" aria-label="Washi Wash Lines home">
-      <img className="brand__mark" src={assets.mark} alt="" />
-      {!compact && (
-        <span className="brand__type">
-          <strong>WASHI</strong>
-          <span>WASH LINES</span>
-        </span>
-      )}
+      <img className="brand__logo" src={assets.logo} alt="Washi Wash Lines" />
     </a>
   );
 }
@@ -242,14 +238,7 @@ export default function Home() {
           </div>
           <div className="comparison__before" style={{ clipPath: `inset(0 ${100 - comparison}% 0 0)` }} aria-hidden="true">
             <div className="traditional-scene">
-              <span className="traditional-scene__post traditional-scene__post--left" />
-              <span className="traditional-scene__post traditional-scene__post--right" />
-              <span className="traditional-scene__line traditional-scene__line--one" />
-              <span className="traditional-scene__line traditional-scene__line--two" />
-              <span className="traditional-scene__line traditional-scene__line--three" />
-              <span className="traditional-scene__cloth traditional-scene__cloth--one" />
-              <span className="traditional-scene__cloth traditional-scene__cloth--two" />
-              <span className="traditional-scene__cloth traditional-scene__cloth--three" />
+              <img className="traditional-scene__photo" src={assets.comparison} alt="" />
               <div className="comparison__caption comparison__caption--before"><span>TRADITIONAL</span><p>Permanent. Bulky. Takes up space.</p></div>
             </div>
           </div>
