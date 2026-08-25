@@ -28,17 +28,17 @@ const WHATSAPP_MESSAGE =
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 const assets = {
-  hero: "/manus-storage/washi-hero-product_24888c39.jpg",
-  logo: "/manus-storage/washi-supplied-logo_f9bea94b.jpeg",
-  comparison: "/manus-storage/washi-comparison-photo_b92eda84.jpg",
-  folded: "/manus-storage/washi-home-reference_526e961a.jpg",
-  hinge: "/manus-storage/washi-wall-reference_5d55921f.jpg",
-  balcony: "/manus-storage/washi-balcony-reference_57e26dc5.jpg",
-  open: "/manus-storage/washi-open-photo_f13376f7.jpg",
-  hang: "/manus-storage/washi-hang-photo_c346f745.jpg",
-  fold: "/manus-storage/washi-fold-photo_029ca6c7.jpg",
-  mount: "/manus-storage/washi-mount-photo_a1e60ef9.jpg",
-  mark: "/manus-storage/washi-folding-mark-v2_a6e5ceac.png",
+  hero: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/FhNgbslLdUJcDFWw.jpg",
+  logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/hhltIxTgsQPJFTLk.jpeg",
+  comparison: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/TtPWYYHDRlIdlRdj.jpg",
+  folded: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/qTTJCbnHDKPmXjUg.jpg",
+  hinge: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/KNKAxEmnqUvRsHil.jpg",
+  balcony: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/ilDEMjnRRnniuUuL.jpg",
+  open: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/aMBwqJYnXbHvWUcU.jpg",
+  hang: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/HQmnpxQSKqmSruuy.jpg",
+  fold: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/IhJKGDuoahdSixKG.jpg",
+  mount: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/jYOouZoNbDvudbKE.jpg",
+  mark: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/ztDdrwyIEaawWHLd.png",
 };
 
 const faqData = [

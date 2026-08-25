@@ -2,6 +2,8 @@
 
 ## Requested brand and comparison update
 
+- [x] Replace Manus-only image paths with production-deployable assets for the GitHub and Vercel build.
+- [x] Verify every website image resolves from the built static output before pushing the fix.
 - [x] Confirm the Vercel static-build configuration is committed and pushed through GitHub.
 - [ ] Identify why the Vercel domain serves server source code instead of the built website.
 - [ ] Correct the Vercel production configuration and verify the live page renders normally.
