@@ -32,6 +32,10 @@ const assets = {
   folded: "/manus-storage/washi-home-reference_526e961a.jpg",
   hinge: "/manus-storage/washi-wall-reference_5d55921f.jpg",
   balcony: "/manus-storage/washi-balcony-reference_57e26dc5.jpg",
+  open: "/manus-storage/washi-open-photo_f13376f7.jpg",
+  hang: "/manus-storage/washi-hang-photo_c346f745.jpg",
+  fold: "/manus-storage/washi-fold-photo_029ca6c7.jpg",
+  mount: "/manus-storage/washi-mount-photo_a1e60ef9.jpg",
   mark: "/manus-storage/washi-folding-mark-v2_a6e5ceac.png",
 };
 
@@ -294,17 +298,10 @@ export default function Home() {
       </section>
 
       <section className="space-planner" aria-labelledby="planner-heading">
-        <div className="space-planner__diagram" aria-hidden="true">
-          <div className="diagram-wall" />
-          <div className="diagram-bracket" />
-          <div className="diagram-arm diagram-arm--one" />
-          <div className="diagram-arm diagram-arm--two" />
-          <div className="diagram-line diagram-line--one" />
-          <div className="diagram-line diagram-line--two" />
-          <div className="diagram-dot diagram-dot--one" />
-          <div className="diagram-dot diagram-dot--two" />
-          <span className="diagram-label diagram-label--top">WALL</span>
-          <span className="diagram-label diagram-label--bottom">YOUR USABLE SPACE</span>
+        <div className="space-planner__photo">
+          <img src={assets.mount} alt="A fold-down washing line being mounted to an exterior wall" />
+          <span className="planner-photo__seam" aria-hidden="true" />
+          <span className="planner-photo__label">WALL FIT / MOUNTING</span>
         </div>
         <div className="space-planner__content">
           <p className="mechanic-label">SPACE PLANNER</p>
@@ -336,9 +333,9 @@ export default function Home() {
           <h2 id="operation-heading">Open.<br />Dry.<br /><span>Fold.</span></h2>
         </div>
         <div className="operation__steps">
-          <article><span>01</span><h3>Open</h3><p>Fold the washing line down into position.</p><i className="step-visual step-visual--open" /></article>
-          <article><span>02</span><h3>Hang</h3><p>Use the drying space without sacrificing your home’s order.</p><i className="step-visual step-visual--hang" /></article>
-          <article><span>03</span><h3>Fold away</h3><p>When you’re finished, fold it neatly back against the wall.</p><i className="step-visual step-visual--fold" /></article>
+          <article><img src={assets.open} alt="Wall-mounted washing line opened and ready to use" /><span>01</span><h3>Open</h3><p>Fold the washing line down into position.</p></article>
+          <article><img src={assets.hang} alt="Laundry hanging on a wall-mounted foldable drying rack" /><span>02</span><h3>Hang</h3><p>Use the drying space without sacrificing your home’s order.</p></article>
+          <article><img src={assets.fold} alt="Foldable washing line shown in its compact wall-mounted form" /><span>03</span><h3>Fold away</h3><p>When you’re finished, fold it neatly back against the wall.</p></article>
         </div>
       </section>
 
