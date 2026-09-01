@@ -24,7 +24,7 @@ import { useEffect, useState } from "react";
 
 const WHATSAPP_NUMBER = "000000000000";
 const WHATSAPP_MESSAGE =
-  "Hi Washi Wash Lines, I'd like to order a foldable washing line. Can you help me choose the right size?";
+  "Hi Washi Wash Lines, I'd like to order a washing line. Can you help me choose the right package?";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 const assets = {
@@ -50,7 +50,7 @@ const faqData = [
   {
     question: "What sizes are available?",
     answer:
-      "Available sizes are confirmed directly with the Washi team. Send a WhatsApp message with a photo or a quick description of your wall and outdoor area.",
+      "Choose a 6 m fixed line with 18 m of hanging space, a 12 m fixed line with 36 m of hanging space, or a rotating washing line with 3 m arms and seven high-strength lines.",
   },
   {
     question: "How much weight can it hold?",
@@ -65,7 +65,7 @@ const faqData = [
   {
     question: "Do you offer installation or delivery?",
     answer:
-      "Please contact Washi directly to confirm the current installation guidance, delivery options, and areas served. These details are not assumed on this website.",
+      "Yes. Materials and installation are included with every package at no extra charge. Contact the Washi team to confirm availability in your area.",
   },
 ];
 
@@ -74,19 +74,66 @@ const planningOptions = [
     id: "compact",
     title: "Compact space",
     label: "BALCONY / SMALL PATIO",
-    response: "Tell us about your available wall and we’ll help you consider the right Washi option.",
+    response: "The 6 m fixed line gives you 18 m of hanging space across three lines and includes free installation for $119.",
   },
   {
     id: "everyday",
     title: "Everyday laundry",
     label: "HOME / PATIO",
-    response: "Share how often you wash and your available wall space, then we’ll help you choose a suitable option.",
+    response: "The 12 m fixed line gives you 36 m of hanging space across three lines and includes free installation for $179.",
   },
   {
     id: "larger",
     title: "Larger routine",
     label: "FAMILY HOME",
-    response: "Tell us about your household routine and the space you want to keep clear. We’ll guide the next step.",
+    response: "The $219 rotating washing line has 3 m arms and seven high-strength lines for generous, space-saving drying.",
+  },
+];
+
+const services = [
+  {
+    label: "01",
+    title: "6 m fixed line",
+    price: "$119",
+    summary: "18 m hanging space",
+    image: assets.folded,
+    alt: "Compact Washi washing line installed in an outdoor space",
+    features: [
+      "2 × 63 mm heavy-gauge poles",
+      "18 m of 3.15 mm galvanised clothesline wire",
+      "3 clothesline tighteners",
+      "2 supporters",
+      "Cement, river sand and ¾ stones",
+    ],
+  },
+  {
+    label: "02",
+    title: "12 m fixed line",
+    price: "$179",
+    summary: "36 m hanging space",
+    image: assets.balcony,
+    alt: "Long Washi washing line providing generous outdoor drying space",
+    features: [
+      "3 heavy-gauge poles",
+      "3 lines, each 12 m long",
+      "36 m of total hanging space",
+      "Materials supplied",
+    ],
+  },
+  {
+    label: "03",
+    title: "Rotating washing line",
+    price: "$219",
+    summary: "7 high-strength lines",
+    image: assets.comparison,
+    alt: "Rotating outdoor washing line with multiple high-strength lines",
+    features: [
+      "3 m arms",
+      "7 high-strength lines",
+      "Space-saving design",
+      "Designed to dry clothes faster",
+      "Materials supplied",
+    ],
   },
 ];
 
@@ -123,11 +170,7 @@ export default function Home() {
   }, []);
 
   const currentPlan = planningOptions.find((option) => option.id === selectedSpace) ?? planningOptions[1];
-  const productPanels = [
-    { label: "01", title: "Find your fit", image: assets.folded, alt: "Folded black Washi washing line mounted neatly to a wall" },
-    { label: "02", title: "Built for the wall", image: assets.hinge, alt: "Close-up view of a black foldable washing line wall bracket" },
-    { label: "03", title: "Keep the view", image: assets.balcony, alt: "Foldable washing line extended across a compact balcony" },
-  ];
+  const selectedService = services[productIndex];
 
   return (
     <main id="top" className="site-shell">
@@ -258,31 +301,38 @@ export default function Home() {
       <section id="products" className="product-section" aria-labelledby="product-heading">
         <div className="product-section__head">
           <div>
-            <p className="mechanic-label mechanic-label--light">CHOOSE YOUR WASHI</p>
-            <h2 id="product-heading">Choose the space.<br />We’ll help with the line.</h2>
+            <p className="mechanic-label mechanic-label--light">FIX, SUPPLY &amp; INSTALL</p>
+            <h2 id="product-heading">Choose your line.<br />We’ll install it free.</h2>
           </div>
-          <p>Current product specifications, dimensions and pricing are confirmed directly with the Washi team.</p>
+          <p>Complete washing-line packages with materials supplied and free installation included.</p>
         </div>
         <div className="product-rail">
-          {productPanels.map((panel, index) => (
+          {services.map((service, index) => (
             <button
               className={`product-panel ${productIndex === index ? "product-panel--active" : ""}`}
-              key={panel.label}
+              key={service.label}
               onClick={() => setProductIndex(index)}
               aria-pressed={productIndex === index}
             >
-              <img src={panel.image} alt={panel.alt} />
+              <img src={service.image} alt={service.alt} />
               <span className="product-panel__overlay" />
-              <span className="product-panel__index">{panel.label}</span>
-              <span className="product-panel__title">{panel.title}</span>
+              <span className="product-panel__index">{service.label} / {service.summary}</span>
+              <span className="product-panel__title">{service.title}<small>{service.price}</small></span>
               <span className="product-panel__arrow"><ArrowUpRight size={20} /></span>
             </button>
           ))}
         </div>
-        <div className="product-disclosure">
-          <span className="product-disclosure__rule" />
-          <p><strong>Product information in progress.</strong> No unverified sizes, dimensions, capacity or pricing are shown here. Tell us about your space and the team will recommend an available Washi option.</p>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">Ask about available wash lines <ArrowUpRight size={17} /></a>
+        <div className="service-details" aria-live="polite">
+          <div className="service-details__intro">
+            <span>{selectedService.label}</span>
+            <div><p>{selectedService.title}</p><strong>{selectedService.price}</strong></div>
+            <small>FIX &amp; SUPPLY</small>
+          </div>
+          <ul>
+            {selectedService.features.map((feature) => <li key={feature}><Check size={15} />{feature}</li>)}
+            <li><Check size={15} />Free installation included</li>
+          </ul>
+          <a className="button button--red" href={WHATSAPP_URL} target="_blank" rel="noreferrer">Order this line <ArrowUpRight size={17} /></a>
         </div>
       </section>
 
@@ -345,9 +395,9 @@ export default function Home() {
       <section className="installation" aria-labelledby="installation-heading">
         <div className="installation__copy">
           <p className="mechanic-label mechanic-label--light">THE NEXT STEP</p>
-          <h2 id="installation-heading">Bring us your wall.<br />We’ll start from there.</h2>
-          <p>Share your outdoor space with Washi. The team can confirm the available product information and guide you through the right next step.</p>
-          <a className="button button--red" href={WHATSAPP_URL} target="_blank" rel="noreferrer">Ask about installation <ArrowUpRight size={18} /></a>
+          <h2 id="installation-heading">Materials supplied.<br />Installation is free.</h2>
+          <p>Choose your washing line package and we’ll supply the materials and install it for you at no extra charge.</p>
+          <a className="button button--red" href={WHATSAPP_URL} target="_blank" rel="noreferrer">Book free installation <ArrowUpRight size={18} /></a>
         </div>
         <div className="installation__process">
           {["Measure", "Mount", "Use"].map((step, index) => <div key={step}><span>0{index + 1}</span><strong>{step}</strong><i /></div>)}
