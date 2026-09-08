@@ -1,5 +1,5 @@
 /**
- * Folding Mechanics design: product function, structural linework, and purposeful red signals lead every section.
+ * T-post design: ground-mounted washing lines, honest site photography, and purposeful red signals lead every section.
  * The WhatsApp number is intentionally configurable below because it was not supplied in the brand brief.
  */
 import {
@@ -28,24 +28,29 @@ const WHATSAPP_MESSAGE =
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 const assets = {
-  hero: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/FhNgbslLdUJcDFWw.jpg",
-  logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/hhltIxTgsQPJFTLk.jpeg",
-  comparison: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/TtPWYYHDRlIdlRdj.jpg",
-  folded: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/qTTJCbnHDKPmXjUg.jpg",
-  hinge: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/KNKAxEmnqUvRsHil.jpg",
-  balcony: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/ilDEMjnRRnniuUuL.jpg",
-  open: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/aMBwqJYnXbHvWUcU.jpg",
-  hang: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/HQmnpxQSKqmSruuy.jpg",
-  fold: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/IhJKGDuoahdSixKG.jpg",
-  mount: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/jYOouZoNbDvudbKE.jpg",
-  mark: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663439519739/ztDdrwyIEaawWHLd.png",
+  hero: "/images/tpost-garden.jpg",
+  logo: "/images/logo.jpeg",
+  laundry: "/images/tpost-laundry.jpg",
+  single: "/images/tpost-single.jpg",
+  longLine: "/images/tpost-long-line.jpg",
+  field: "/images/tpost-field.jpg",
+  pavedYard: "/images/tpost-paved-yard.jpg",
+  multiWhite: "/images/tpost-multi-white.jpg",
+  brickWall: "/images/tpost-brick-wall.jpg",
+  greyWall: "/images/tpost-grey-wall.jpg",
+  wallInstall: "/images/tpost-wall-install.jpg",
+  backyard: "/images/tpost-backyard.jpg",
+  materials: "/images/tpost-materials.jpg",
+  rotaryFolded: "/images/rotary-folded.jpg",
+  rotarySky: "/images/rotary-sky.jpg",
+  mark: "/images/mark.png",
 };
 
 const faqData = [
   {
-    question: "How does a foldable washing line work?",
+    question: "How does a Washi T-post washing line work?",
     answer:
-      "Washi lines are designed to open out when you need drying space and fold back against the wall when you are finished. Ask us about the current options for your space.",
+      "Our lines are heavy-gauge steel T-posts installed in the ground and tensioned with high-strength wire, giving you permanent, weather-resistant drying space in your yard — nothing to fold, nothing to store.",
   },
   {
     question: "What sizes are available?",
@@ -58,9 +63,9 @@ const faqData = [
       "Load guidance depends on the selected Washi option and installation surface. The team will share the applicable product information before you order.",
   },
   {
-    question: "Can it be installed on my wall?",
+    question: "Can it be installed in my yard?",
     answer:
-      "Wall suitability needs to be confirmed for the specific site. Share your wall type and a photograph with the Washi team to start the conversation.",
+      "Yes. T-posts are cemented into the ground on lawns, paving, along boundary walls and in open yards. Share your space and a photograph with the Washi team to start the conversation.",
   },
   {
     question: "Do you offer installation or delivery?",
@@ -73,7 +78,7 @@ const planningOptions = [
   {
     id: "compact",
     title: "Compact space",
-    label: "BALCONY / SMALL PATIO",
+    label: "SMALL YARD / COURTYARD",
     response: "The 6 m fixed line gives you 18 m of hanging space across three lines and includes free installation for $119.",
   },
   {
@@ -96,8 +101,8 @@ const services = [
     title: "6 m fixed line",
     price: "$119",
     summary: "18 m hanging space",
-    image: assets.folded,
-    alt: "Compact Washi washing line installed in an outdoor space",
+    image: assets.single,
+    alt: "Compact black Washi T-post washing line installed in a garden",
     features: [
       "2 × 63 mm heavy-gauge poles",
       "18 m of 3.15 mm galvanised clothesline wire",
@@ -111,8 +116,8 @@ const services = [
     title: "12 m fixed line",
     price: "$179",
     summary: "36 m hanging space",
-    image: assets.balcony,
-    alt: "Long Washi washing line providing generous outdoor drying space",
+    image: assets.longLine,
+    alt: "A long run of Washi T-posts with tensioned lines along a boundary wall",
     features: [
       "3 heavy-gauge poles",
       "3 lines, each 12 m long",
@@ -125,8 +130,8 @@ const services = [
     title: "Rotating washing line",
     price: "$219",
     summary: "7 high-strength lines",
-    image: assets.comparison,
-    alt: "Rotating outdoor washing line with multiple high-strength lines",
+    image: assets.rotarySky,
+    alt: "Black Washi rotating washing line with arms spread against a blue sky",
     features: [
       "3 m arms",
       "7 high-strength lines",
@@ -226,7 +231,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.12 }}
           >
-            WALL-MOUNTED / FOLDABLE / MADE FOR HOME
+            GROUND-MOUNTED / T-POST / MADE FOR HOME
           </motion.p>
           <motion.h1
             id="hero-heading"
@@ -242,7 +247,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.58, delay: 0.36, ease: [0.23, 1, 0.32, 1] }}
           >
-            <p>Premium foldable washing lines for homes that need drying space, not permanent clutter.</p>
+            <p>Premium T-post washing lines for homes that need serious drying space — installed once, built to last.</p>
             <div className="hero__actions">
               <button className="button button--red" onClick={() => scrollToId("products", reducedMotion)}>
                 View wash lines <MoveRight size={18} />
@@ -263,26 +268,26 @@ export default function Home() {
           <p className="mechanic-label">BUILT FOR EVERYDAY LIFE</p>
           <span className="proof-strip__line" />
         </div>
-        <div className="proof-item"><span>01</span><div><strong>Space saving</strong><p>Folds neatly against the wall when you’re finished.</p></div></div>
-        <div className="proof-item"><span>02</span><div><strong>Durable</strong><p>Designed for reliable, everyday use.</p></div></div>
-        <div className="proof-item"><span>03</span><div><strong>Easy to use</strong><p>Open it. Hang your clothes. Fold it away.</p></div></div>
+        <div className="proof-item"><span>01</span><div><strong>Heavy-gauge steel</strong><p>Painted T-posts cemented into the ground for years of use.</p></div></div>
+        <div className="proof-item"><span>02</span><div><strong>Durable</strong><p>High-strength tensioned wire, built for everyday laundry.</p></div></div>
+        <div className="proof-item"><span>03</span><div><strong>Easy to use</strong><p>Walk out. Hang your clothes. Done.</p></div></div>
       </section>
 
       <section className="space-problem" aria-labelledby="space-heading">
         <div className="section-intro section-intro--problem">
-          <p className="mechanic-label">THE SPACE TEST</p>
-          <h2 id="space-heading">Your washing line shouldn’t take over your yard.</h2>
-          <p>Traditional washing lines consume outdoor space. Washi gives you the drying space you need, then gets out of the way.</p>
+          <p className="mechanic-label">THE INSTALL TEST</p>
+          <h2 id="space-heading">From bare yard to full drying power.</h2>
+          <p>We supply the posts, wire, cement and labour. Slide to see what a Washi installation looks like on the day.</p>
         </div>
-        <div className="comparison" aria-label="Interactive comparison between a traditional washing line and Washi">
+        <div className="comparison" aria-label="Interactive comparison between an unserved yard and a finished Washi installation">
           <div className="comparison__after">
-            <img src={assets.folded} alt="A folded Washi washing line keeping a wall clean and uncluttered" />
-            <div className="comparison__caption comparison__caption--after"><span>WASHI</span><p>Foldable. Practical. Space efficient.</p></div>
+            <img src={assets.laundry} alt="A Washi T-post washing line with towels drying across the lines" />
+            <div className="comparison__caption comparison__caption--after"><span>AFTER</span><p>Installed. Tensioned. Ready for laundry.</p></div>
           </div>
           <div className="comparison__before" style={{ clipPath: `inset(0 ${100 - comparison}% 0 0)` }} aria-hidden="true">
             <div className="traditional-scene">
-              <img className="traditional-scene__photo" src={assets.comparison} alt="" />
-              <div className="comparison__caption comparison__caption--before"><span>TRADITIONAL</span><p>Permanent. Bulky. Takes up space.</p></div>
+              <img className="traditional-scene__photo" src={assets.materials} alt="" />
+              <div className="comparison__caption comparison__caption--before"><span>BEFORE</span><p>Posts, wire and cement — delivered to your yard.</p></div>
             </div>
           </div>
           <div className="comparison__handle" style={{ left: `${comparison}%` }} aria-hidden="true"><span>↔</span></div>
@@ -338,7 +343,7 @@ export default function Home() {
 
       <section className="space-planner" aria-labelledby="planner-heading">
         <div className="space-planner__photo">
-          <img src={assets.mount} alt="A fold-down washing line being mounted to an exterior wall" />
+          <img src={assets.pavedYard} alt="Washi T-posts installed along a paved backyard courtyard" />
           <span className="planner-photo__seam" aria-hidden="true" />
           <span className="planner-photo__label">WALL FIT / MOUNTING</span>
         </div>
@@ -369,22 +374,22 @@ export default function Home() {
       <section id="how-it-works" className="operation" aria-labelledby="operation-heading">
         <div className="operation__heading">
           <p className="mechanic-label mechanic-label--light">HOW IT WORKS</p>
-          <h2 id="operation-heading">Open.<br />Dry.<br /><span>Fold.</span></h2>
+          <h2 id="operation-heading">Choose.<br />Install.<br /><span>Dry.</span></h2>
         </div>
         <div className="operation__steps">
-          <article><img src={assets.open} alt="Wall-mounted washing line opened and ready to use" /><span>01</span><h3>Open</h3><p>Fold the washing line down into position.</p></article>
-          <article><img src={assets.hang} alt="Laundry hanging on a wall-mounted foldable drying rack" /><span>02</span><h3>Hang</h3><p>Use the drying space without sacrificing your home’s order.</p></article>
-          <article><img src={assets.fold} alt="Foldable washing line shown in its compact wall-mounted form" /><span>03</span><h3>Fold away</h3><p>When you’re finished, fold it neatly back against the wall.</p></article>
+          <article><img src={assets.materials} alt="Washi T-posts, wire and cement laid out before installation" /><span>01</span><h3>Choose</h3><p>Pick the package that fits your yard and laundry routine.</p></article>
+          <article><img src={assets.wallInstall} alt="Washi T-posts being cemented into the ground during installation" /><span>02</span><h3>Install</h3><p>We dig, cement the posts and tension the wire — at no extra charge.</p></article>
+          <article><img src={assets.laundry} alt="Towels hanging on an installed Washi washing line" /><span>03</span><h3>Dry</h3><p>Sun-dried laundry every day, with drying space to spare.</p></article>
         </div>
       </section>
 
       <section className="benefits" aria-labelledby="benefits-heading">
-        <div className="benefits__visual"><img src={assets.hinge} alt="Detailed view of Washi’s durable black steel folding mechanism" /><span className="detail-marker detail-marker--one">01 <b>Secure wall mount</b></span><span className="detail-marker detail-marker--two">02 <b>Folding joint</b></span></div>
+        <div className="benefits__visual"><img src={assets.brickWall} alt="Black Washi T-posts installed along a brick boundary wall" /><span className="detail-marker detail-marker--one">01 <b>Heavy-gauge T-post</b></span><span className="detail-marker detail-marker--two">02 <b>Tensioned wire</b></span></div>
         <div className="benefits__content">
           <p className="mechanic-label">WHY WASHI</p>
           <h2 id="benefits-heading">Built around a<br />simple daily routine.</h2>
           <div className="benefit-list">
-            {["More space", "Less clutter", "Made for daily use", "A cleaner look"].map((benefit, index) => (
+            {["Serious drying space", "Weather-resistant steel", "Cemented for stability", "No clutter, ever"].map((benefit, index) => (
               <div className="benefit-list__item" key={benefit}><span>0{index + 1}</span><p>{benefit}</p><Plus size={18} /></div>
             ))}
           </div>
@@ -407,13 +412,13 @@ export default function Home() {
       <section id="gallery" className="gallery" aria-labelledby="gallery-heading">
         <div className="gallery__top">
           <div><p className="mechanic-label">BUILT FOR REAL HOMES</p><h2 id="gallery-heading">Space looks better<br />when it works harder.</h2></div>
-          <p>Product-focused imagery for homes, patios, balconies and compact outdoor spaces.</p>
+          <p>Real installations for real yards — lawns, courtyards, patios and spaces along boundary walls.</p>
         </div>
         <div className="gallery-grid">
-          <figure className="gallery-grid__main"><img src={assets.balcony} alt="Washi foldable washing line fully extended across a modern balcony" /><figcaption>EXTENDED / BALCONY</figcaption></figure>
-          <figure className="gallery-grid__top"><img src={assets.folded} alt="Washi line folded flat to a modern exterior wall" /><figcaption>FOLDED / WALL</figcaption></figure>
-          <div className="gallery-grid__statement"><span>KEEP THE <b>VIEW.</b></span><i /></div>
-          <figure className="gallery-grid__detail"><img src={assets.hinge} alt="Black Washi folding line hinge in close-up" /><figcaption>DETAIL / MECHANISM</figcaption></figure>
+          <figure className="gallery-grid__main"><img src={assets.greyWall} alt="A full run of Washi T-post washing lines installed along a grey boundary wall" /><figcaption>INSTALLED / BOUNDARY WALL</figcaption></figure>
+          <figure className="gallery-grid__top"><img src={assets.rotaryFolded} alt="A Washi rotating washing line with arms folded between wash days" /><figcaption>ROTARY / ARMS FOLDED</figcaption></figure>
+          <div className="gallery-grid__statement"><span>ALWAYS READY <b>TO DRY.</b></span><i /></div>
+          <figure className="gallery-grid__detail"><img src={assets.multiWhite} alt="A set of galvanised Washi T-posts installed across a paved courtyard" /><figcaption>GALVANISED / COURTYARD</figcaption></figure>
         </div>
       </section>
 
@@ -436,7 +441,7 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <div className="footer__top"><WashiLogo /><p>Your devoted foldable washline supplier.</p><a className="footer__whatsapp" href={WHATSAPP_URL} target="_blank" rel="noreferrer">WhatsApp us <ArrowUpRight size={17} /></a></div>
+        <div className="footer__top"><WashiLogo /><p>Your devoted washline supplier.</p><a className="footer__whatsapp" href={WHATSAPP_URL} target="_blank" rel="noreferrer">WhatsApp us <ArrowUpRight size={17} /></a></div>
         <div className="footer__links"><a href="#products">Products</a><a href="#how-it-works">How it works</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><span>© {new Date().getFullYear()} Washi Wash Lines</span></div>
         <p className="footer__note">Website contact link uses a configurable WhatsApp placeholder. Replace <code>WHATSAPP_NUMBER</code> in the site source before launch.</p>
       </footer>
